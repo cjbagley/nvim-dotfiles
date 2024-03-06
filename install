@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+NVIMPRO=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+rm -rf $HOME/.config/nvim
+ln -s $NVIMPRO/projects/nvim-config/nvim $HOME/.config/nvim
