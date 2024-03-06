@@ -14,9 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 
     -- Color scheme
-    { import = 'user.plugins.tokyonight' },
+    { import = 'cjb.plugins.tokyonight' },
 
     -- Comments
-    { import = 'user.plugins.vim-commentary' },
+    { import = 'cjb.plugins.vim-commentary' },
 
 })
