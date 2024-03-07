@@ -1,12 +1,25 @@
--- Space is my leader.
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Quickly clear search highlighting.
-vim.keymap.set('n', '<leader>k', ':nohlsearch<CR>')
+-- Custom wrapper used below so description can be added for which-key
 
--- Close all open buffers.
-vim.keymap.set('n', '<leader>Q', ':bufdo bdelete<CR>')
+-- Save/Write
+CJB.Nmap('<leader>w', ':w<CR>', 'write changes', {})
+CJB.Nmap('<leader>W', ':W<CR>', 'write and quit', {})
+CJB.Nmap('<leader>q', ':q<CR>', 'quit', {})
+
+-- Split related
+CJB.Nmap('<leader>|', '<C-w>v', 'split window vertically', {})
+CJB.Nmap('<leader>-', '<C-w>s', 'split window horizontally', {})
+CJB.Nmap('<leader>se', '<C-w>e', 'make splits equal width', {})
+CJB.Nmap('<leader>x', ':close<CR>', 'close split', {})
+
+
+-- Below from jessarcher/dotfiles, but some changed to use my wrapper
+
+-- Quickly clear search highlighting.
+CJB.Nmap('<leader>k', ':nohlsearch<CR>', 'clear search highlighting', {})
+CJB.Nmap('<leader>Q', ':bufdo bdelete<CR>', 'Close all open buffers', {})
 
 -- Reselect visual selection after indenting.
 vim.keymap.set('v', '<', '<gv')
@@ -29,7 +42,7 @@ vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
 vim.keymap.set('i', ',,', '<Esc>A,<Esc>');
 
 -- Open the current file in the default program (on Mac this should just be just `open`).
-vim.keymap.set('n', '<leader>x', ':!xdg-open %<cr><cr>')
+CJB.Nmap('<leader>o', ':!xdg-open %<cr><cr>', 'open in default program', {})
 
 -- Disable annoying command line thing.
 vim.keymap.set('n', 'q:', ':q<CR>')
