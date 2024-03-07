@@ -104,8 +104,8 @@ return {
         fg = c.fg_dark,
       }
       hl.TelescopeBorder = {
-        bg = c.bg_dark,
-        fg = c.bg_dark,
+        bg = '#767c9d',
+        fg = '#767c9d',
       }
       hl.TelescopePromptNormal = {
         bg = prompt,

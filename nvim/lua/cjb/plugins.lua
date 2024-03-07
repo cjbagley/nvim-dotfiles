@@ -96,6 +96,12 @@ require('lazy').setup({
 
     -- Highlight occurrences of the word under the cursor.
     { import = 'cjb.plugins.illuminate' },
+
+    -- Emmet functionality --
+  { 'mattn/emmet-vim' },
+
+  -- Grammer checker, run :GrammerousCheck
+  { 'rhysd/vim-grammarous' },
 }, {
   checker = {
     enabled = true,
