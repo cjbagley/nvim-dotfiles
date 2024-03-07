@@ -26,7 +26,7 @@ require('lazy').setup({
     { 'tpope/vim-fugitive', dependencies = 'tpope/vim-rhubarb' },
 
     -- Allow plugins to enable repeating of commands.
-    { 'tpope/vim-repeat' }, 
+    { 'tpope/vim-repeat' },
 
     -- Indent autodetection with editorconfig support.
     { 'tpope/vim-sleuth' },
@@ -43,7 +43,6 @@ require('lazy').setup({
     -- Enable * searching with visually selected text.
     { 'nelstrom/vim-visual-star-search' },
 
-
     -- Automatically set the working directory to the project root.
     { import = 'cjb.plugins.vim-rooter' },
 
@@ -53,5 +52,59 @@ require('lazy').setup({
     -- Add smooth scrolling to avoid jarring jumps
     { 'karb94/neoscroll.nvim', config = true },
 
+    -- Split arrays and methods onto multiple lines, or join them back up.
+    { import = 'cjb.plugins.treesj' },
 
+    -- Automatically fix indentation when pasting code.
+    { import = 'cjb.plugins.vim-pasta' },
+
+    -- Fuzzy finder
+    { import = 'cjb.plugins.telescope' },
+
+    -- File tree sidebar
+    { import = 'cjb.plugins.neo-tree' },
+
+    -- A Status line.
+    { import = 'cjb.plugins.lualine' },
+
+    -- Display buffers as tabs.
+    { import = 'cjb.plugins.bufferline' },
+
+    -- Improved syntax highlighting
+    { import = 'cjb.plugins.treesitter' },
+
+    -- Language Server Protocol.
+    { import = 'cjb.plugins.lspconfig' },
+
+    -- Completion
+    { import = 'cjb.plugins.cmp' },
+
+    -- PHP Refactoring Tools
+    { import = 'cjb.plugins.phpactor' },
+
+    -- Testing helper
+    { import = 'cjb.plugins.vim-test' },
+
+    -- Colorize Hex Codes
+    { import = 'cjb.plugins.colorizer' },
+
+    -- Show file and LSP context in a bar at the top of the screen.
+    { import = 'cjb.plugins.barbecue' },
+
+    -- Virtual scrollbar
+    { import = 'cjb.plugins.nvim-scrollbar' },
+
+    -- Highlight occurrences of the word under the cursor.
+    { import = 'cjb.plugins.illuminate' },
+}, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+  install = {
+    colorscheme = { "tokyonight", "habamax" },
+  },
 })
