@@ -98,10 +98,14 @@ require('lazy').setup({
     { import = 'cjb.plugins.illuminate' },
 
     -- Emmet functionality --
-  { 'mattn/emmet-vim' },
+    { 'mattn/emmet-vim' },
 
-  -- Grammer checker, run :GrammerousCheck
-  { 'rhysd/vim-grammarous' },
+    -- Grammer checker, run :GrammerousCheck
+    { 'rhysd/vim-grammarous' },
+
+    -- Show key combinations --
+    { 'folke/which-key.nvim', opts = {} },
+
 }, {
   checker = {
     enabled = true,
