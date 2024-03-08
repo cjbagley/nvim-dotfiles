@@ -38,7 +38,7 @@ return {
     end
 
     cmp.setup({
-      preselect = false,
+      preselect = 'item',
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
@@ -103,7 +103,7 @@ return {
             fallback()
           end
         end, { "i", "s" }),
-        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<C-k>'] = cmp.mapping.confirm({ select = true }),
       },
       sources = {
         { name = 'nvim_lsp' },
@@ -114,7 +114,7 @@ return {
         { name = 'path' },
       },
       experimental = {
-        -- ghost_text = true,
+        ghost_text = true,
       },
     })
   end,
