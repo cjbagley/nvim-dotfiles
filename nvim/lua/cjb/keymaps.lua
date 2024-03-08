@@ -3,10 +3,11 @@ vim.g.maplocalleader = ' '
 
 -- Custom wrapper used below so description can be added for which-key
 
--- Save/Write
+-- Save/Write/close
 CJB.Nmap('<leader>w', ':w<CR>', 'write changes', {})
 CJB.Nmap('<leader>W', ':W<CR>', 'write and quit', {})
-CJB.Nmap('<leader>q', ':q<CR>', 'quit', {})
+CJB.Nmap('<leader>Q', ':q<CR>', 'quit', {})
+CJB.Nmap('<leader>q', ':bd<CR>', 'close open buffer', {})
 
 -- Split related
 CJB.Nmap('<leader>|', '<C-w>v', 'split window vertically', {})
@@ -19,7 +20,6 @@ CJB.Nmap('<leader>x', ':close<CR>', 'close split', {})
 
 -- Quickly clear search highlighting.
 CJB.Nmap('<leader>k', ':nohlsearch<CR>', 'clear search highlighting', {})
-CJB.Nmap('<leader>Q', ':bufdo bdelete<CR>', 'Close all open buffers', {})
 
 -- Reselect visual selection after indenting.
 vim.keymap.set('v', '<', '<gv')
@@ -36,10 +36,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- Paste replace visual selection without copying it.
 vim.keymap.set('v', 'p', '"_dP')
-
--- Easy insertion of a trailing ; or , from insert mode.
-vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
-vim.keymap.set('i', ',,', '<Esc>A,<Esc>');
 
 -- Open the current file in the default program (on Mac this should just be just `open`).
 CJB.Nmap('<leader>o', ':!xdg-open %<cr><cr>', 'open in default program', {})

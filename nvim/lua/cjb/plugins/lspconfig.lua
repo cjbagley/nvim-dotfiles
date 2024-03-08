@@ -80,8 +80,6 @@ return {
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 
-    -- Tailwind CSS
-    require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
 
     -- JSON
     require('lspconfig').jsonls.setup({
@@ -92,6 +90,17 @@ return {
         },
       },
     })
+
+    -- All others LSP setup
+    require('lspconfig').bashls.setup({ capabilities = capabilities })
+    require('lspconfig').cssls.setup({ capabilities = capabilities })
+    require('lspconfig').dockerls.setup({ capabilities = capabilities })
+    require('lspconfig').gopls.setup({ capabilities = capabilities })
+    require('lspconfig').lua_ls.setup({ capabilities = capabilities })
+    require('lspconfig').html.setup({ capabilities = capabilities })
+    require('lspconfig').pyright.setup({ capabilities = capabilities })
+    require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
+    require('lspconfig').yamlls.setup({ capabilities = capabilities })
 
     -- null-ls
     local null_ls = require('null-ls')
