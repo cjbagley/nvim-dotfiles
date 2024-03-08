@@ -47,7 +47,6 @@ return {
         'filetype',
         'encoding',
         'fileformat',
-        '(vim.bo.expandtab and "␠ " or "⇥ ") .. vim.bo.shiftwidth',
       },
       lualine_z = {
         'searchcount',

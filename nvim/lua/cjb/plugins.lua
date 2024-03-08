@@ -97,15 +97,22 @@ require('lazy').setup({
     -- Highlight occurrences of the word under the cursor.
     { import = 'cjb.plugins.illuminate' },
 
-    -- Emmet functionality --
+    -- Emmet functionality
     { 'mattn/emmet-vim' },
 
     -- Grammer checker, run :GrammerousCheck
     { 'rhysd/vim-grammarous' },
 
-    -- Show key combinations --
-    { 'folke/which-key.nvim', opts = {} },
+    -- Show key combinations
+    { import = 'cjb.plugins.which-key' },
 
+    -- org mode related
+    { import = 'cjb.plugins.orgmode' },
+    { import = 'cjb.plugins.org-bullets' },
+    { "dhruvasagar/vim-table-mode" },
+
+    -- Navigation helper
+    { import = 'cjb.plugins.leap' },
 }, {
   checker = {
     enabled = true,

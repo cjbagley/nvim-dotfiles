@@ -71,6 +71,7 @@ return {
         hide_dotfiles = false,
         hide_by_name = {
           ".git",
+          "__pycache__",
         },
       },
       -- follow_current_file = {
