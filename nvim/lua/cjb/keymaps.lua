@@ -15,6 +15,9 @@ CJB.Nmap('<leader>-', '<C-w>s', 'split window horizontally', {})
 CJB.Nmap('<leader>se', '<C-w>e', 'make splits equal width', {})
 CJB.Nmap('<leader>x', ':close<CR>', 'close split', {})
 
+-- Movement
+vim.keymap.set('n', '<M-h>', ':bp<CR>')
+vim.keymap.set('n', '<M-l>', ':bn<CR>')
 
 -- Below from jessarcher/dotfiles, but some changed to use my wrapper
 

@@ -38,7 +38,7 @@ return {
     end
 
     cmp.setup({
-      preselect = 'item',
+      preselect = false,
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
@@ -83,7 +83,6 @@ return {
       },
       mapping = {
         ["<Tab>"] = cmp.mapping(function(fallback)
-          -- print('tab...')
           if cmp.visible() then
             cmp.select_next_item()
           elseif luasnip.expand_or_jumpable() then
