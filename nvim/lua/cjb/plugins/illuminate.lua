@@ -4,7 +4,7 @@ return {
   config = function()
     require('illuminate').configure({
       min_count_to_highlight = 2,
-      delay = 1000,
+      delay = 300,
       providers = { 'lsp' },
     })
   end,

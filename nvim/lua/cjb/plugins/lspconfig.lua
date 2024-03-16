@@ -91,8 +91,17 @@ return {
       },
     })
 
+    require('lspconfig').bashls.setup({
+      capabilities = capabilities,
+      filetypes = { 'sh', 'aliases'},
+      settings = {
+        bashIde = {
+            globPattern = "*@(.sh|.inc|.bash|.command|.aliases)"
+          }
+      },
+    })
+
     -- All others LSP setup
-    require('lspconfig').bashls.setup({ capabilities = capabilities })
     require('lspconfig').cssls.setup({ capabilities = capabilities })
     require('lspconfig').dockerls.setup({ capabilities = capabilities })
     require('lspconfig').gopls.setup({ capabilities = capabilities })

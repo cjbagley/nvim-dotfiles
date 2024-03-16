@@ -32,6 +32,7 @@ vim.opt.ignorecase = true
 vim.opt.mouse = 'a' -- enable mouse for all modes
 vim.opt.mousemoveevent = true -- Allow hovering in bufferline
 vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
+vim.opt.spelllang = 'en_gb'
 vim.opt.spell = true
 vim.opt.smartcase = true
 vim.opt.scrolloff = 8
