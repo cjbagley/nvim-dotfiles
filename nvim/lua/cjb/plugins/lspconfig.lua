@@ -15,7 +15,22 @@ return {
         height = 0.8,
       },
     })
-    require('mason-lspconfig').setup({ automatic_installation = true })
+    require('mason-lspconfig').setup({
+      automatic_installation = true,
+      ensure_installed = {
+          'bashls',
+          'cssls',
+          'dockerls',
+          'gopls',
+          'lua_ls',
+          'html',
+          'intelephense',
+          'pyright',
+          'svelte',
+          'tailwindcss',
+          'yamlls',
+      },
+    })
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -105,8 +120,10 @@ return {
     require('lspconfig').cssls.setup({ capabilities = capabilities })
     require('lspconfig').dockerls.setup({ capabilities = capabilities })
     require('lspconfig').gopls.setup({ capabilities = capabilities })
+    require('lspconfig').lua_ls.setup({ capabilities = capabilities })
     require('lspconfig').html.setup({ capabilities = capabilities })
     require('lspconfig').pyright.setup({ capabilities = capabilities })
+    require('lspconfig').svelte.setup({ capabilities = capabilities })
     require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
     require('lspconfig').yamlls.setup({ capabilities = capabilities })
 
