@@ -16,6 +16,9 @@ require('lazy').setup({
     -- Color scheme
     { import = 'cjb.plugins.tokyonight' },
 
+    -- Zen Mode 
+    { import = 'cjb.plugins.zen-mode' },
+
     -- Comments
     { import = 'cjb.plugins.vim-commentary' },
 
