@@ -20,7 +20,7 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 vim.opt.tabstop = 4
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- Editor
 vim.opt.backup = true -- automatically save a backup file
