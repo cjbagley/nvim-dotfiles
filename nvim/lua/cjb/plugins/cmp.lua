@@ -111,6 +111,7 @@ return {
         -- { name = 'copilot' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'orgmode' },
       },
       experimental = {
         ghost_text = true,

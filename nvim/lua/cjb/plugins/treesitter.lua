@@ -49,6 +49,7 @@ return {
       'yaml',
     },
     auto_install = true,
+    ignore_install = { 'org' },
     highlight = {
       enable = true,
     },

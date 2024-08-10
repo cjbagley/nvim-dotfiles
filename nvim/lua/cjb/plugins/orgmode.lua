@@ -1,27 +1,14 @@
 return {
     'nvim-orgmode/orgmode',
-    dependencies = {
-        { 'nvim-treesitter/nvim-treesitter', lazy = true },
-    },
     event = 'VeryLazy',
+    ft = { 'org' },
     config = function()
-        -- Load treesitter grammar for org
-        require('orgmode').setup_ts_grammar()
-
-        -- Setup treesitter
-        require('nvim-treesitter.configs').setup({
-            highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = { 'org' },
-            },
-            ensure_installed = { 'org' },
-        })
-
         -- Setup orgmode
         require('orgmode').setup({
             org_agenda_files = '~/link/**/*',
             org_default_notes_file = '~/link/inbox/refile.org',
-            org_startup_indented = true,
+            org_startup_indented = false,
+            org_startup_folded = 'showeverything',
         })
     end,
 }
