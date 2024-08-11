@@ -110,9 +110,11 @@ require('lazy').setup({
     { import = 'cjb.plugins.which-key' },
 
     -- org mode related
-    { import = 'cjb.plugins.orgmode' },
-    { import = 'cjb.plugins.org-bullets' },
-    { "dhruvasagar/vim-table-mode" },
+    -- { import = 'cjb.plugins.orgmode' },
+    -- { import = 'cjb.plugins.org-bullets' },
+    -- { "dhruvasagar/vim-table-mode" },
+    -- { import = 'cjb.plugins.telekasten' },
+    { import = 'cjb.plugins.obsidian-nvim' },
 
     -- Navigation helper
     { import = 'cjb.plugins.leap' },
