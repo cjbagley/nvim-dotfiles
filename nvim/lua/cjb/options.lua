@@ -14,7 +14,7 @@ vim.opt.titlestring = '%f // nvim'
 
 -- Text
 vim.opt.breakindent = true -- maintain indent when wrapping indented lines
-vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 0 -- Note to self, this hides things, like when you are recording a macro
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
