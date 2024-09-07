@@ -16,7 +16,7 @@ require('lazy').setup({
     -- Color scheme
     { import = 'cjb.plugins.tokyonight' },
 
-    -- Zen Mode 
+    -- Zen Mode
     { import = 'cjb.plugins.zen-mode' },
 
     -- Comments
@@ -110,8 +110,10 @@ require('lazy').setup({
     { import = 'cjb.plugins.which-key' },
 
     -- org mode related
-    { import = 'cjb.plugins.orgmode' },
-    { import = 'cjb.plugins.org-bullets' },
+    -- { import = 'cjb.plugins.orgmode' },
+    -- { import = 'cjb.plugins.org-bullets' },
+
+    -- table mode
     { "dhruvasagar/vim-table-mode" },
 
     -- Navigation helper
