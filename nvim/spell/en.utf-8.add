@@ -27,3 +27,5 @@ Creational
 SRP
 OCP
 Sennaar
+args
+kwargs
