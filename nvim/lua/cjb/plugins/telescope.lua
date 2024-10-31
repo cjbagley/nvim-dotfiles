@@ -33,8 +33,8 @@ return {
         mappings = {
           i = {
             ['<esc>'] = actions.close,
-            ['<C-Down>'] = actions.cycle_history_next,
-            ['<C-Up>'] = actions.cycle_history_prev,
+            ['<C-j>'] = actions.move_selection_next,
+            ['<C-k>'] = actions.move_selection_previous,
           },
         },
         file_ignore_patterns = { '.git/' },
