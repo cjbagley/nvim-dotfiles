@@ -98,7 +98,7 @@ require('lazy').setup({
     { import = 'cjb.plugins.nvim-scrollbar' },
 
     -- Highlight occurrences of the word under the cursor.
-    { import = 'cjb.plugins.illuminate' },
+    -- { import = 'cjb.plugins.illuminate' },
 
     -- Emmet functionality
     { 'mattn/emmet-vim' },
