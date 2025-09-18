@@ -37,7 +37,7 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
     -- PHP
-    require('lspconfig').intelephense.setup({
+    vim.lsp.config('intelephense', {
       commands = {
         IntelephenseIndex = {
           function()
@@ -55,7 +55,7 @@ return {
       capabilities = capabilities
     })
 
-    require('lspconfig').phpactor.setup({
+    vim.lsp.config('phpactor', {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         client.server_capabilities.completionProvider = false
@@ -83,7 +83,7 @@ return {
     })
 
     -- Vue, JavaScript, TypeScript
-    require('lspconfig').volar.setup({
+    vim.lsp.config('volar', {
       on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
@@ -99,7 +99,7 @@ return {
 
 
     -- JSON
-    require('lspconfig').jsonls.setup({
+    vim.lsp.config('jsonls', {
       capabilities = capabilities,
       settings = {
         json = {
@@ -108,7 +108,7 @@ return {
       },
     })
 
-    require('lspconfig').bashls.setup({
+    vim.lsp.config('bashls', {
       capabilities = capabilities,
       filetypes = { 'sh', 'aliases'},
       settings = {
@@ -119,17 +119,17 @@ return {
     })
 
     -- All others LSP setup
-    require('lspconfig').cssls.setup({ capabilities = capabilities })
-    require('lspconfig').dockerls.setup({ capabilities = capabilities })
-    require('lspconfig').gopls.setup({ capabilities = capabilities })
-    require('lspconfig').lua_ls.setup({ capabilities = capabilities })
-    require('lspconfig').html.setup({ capabilities = capabilities })
-    require('lspconfig').marksman.setup({ capabilities = capabilities })
-    require('lspconfig').pylsp.setup({ capabilities = capabilities })
-    -- require('lspconfig').pyright.setup({ capabilities = capabilities })
-    require('lspconfig').svelte.setup({ capabilities = capabilities })
-    require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
-    require('lspconfig').yamlls.setup({ capabilities = capabilities })
+    vim.lsp.config('cssls', { capabilities = capabilities })
+    vim.lsp.config('dockerls', { capabilities = capabilities })
+    vim.lsp.config('gopls', { capabilities = capabilities })
+    vim.lsp.config('lua_ls', { capabilities = capabilities })
+    vim.lsp.config('html', { capabilities = capabilities })
+    vim.lsp.config('marksman', { capabilities = capabilities })
+    vim.lsp.config('pylsp', { capabilities = capabilities })
+    -- vim.lsp.config('pyright', { capabilities = capabilities })
+    vim.lsp.config('svelte', { capabilities = capabilities })
+    vim.lsp.config('tailwindcss', { capabilities = capabilities })
+    vim.lsp.config('yamlls', { capabilities = capabilities })
 
     -- null-ls
     -- local null_ls = require('null-ls')
