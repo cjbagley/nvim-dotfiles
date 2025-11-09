@@ -118,6 +118,9 @@ require('lazy').setup({
 
     -- Navigation helper
     { import = 'cjb.plugins.leap' },
+
+    -- Markdown rendering
+    { import = 'cjb.plugins.render-markdown' },
 }, {
   checker = {
     enabled = true,
