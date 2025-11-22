@@ -53,3 +53,7 @@ vim.keymap.set('n', '<A-j>', ':move .+1<CR>==')
 vim.keymap.set('n', '<A-k>', ':move .-2<CR>==')
 vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
+
+-- Leap plugin suggests keeping the keybindings out of lazy 'keys', and who am I to argue
+vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
+vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
