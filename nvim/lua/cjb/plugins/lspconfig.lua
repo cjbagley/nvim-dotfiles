@@ -189,10 +189,6 @@ return {
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
     vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
-    -- org snippets
-    vim.keymap.set('n', '<Leader>iq', 'i#+BEGIN_QUOTE<CR>#+END_QUOTE<ESC><S-o>')
-    vim.keymap.set('n', '<Leader>is', 'i#+BEGIN_SRC<CR>#+END_SRC<ESC><S-o>')
-
     -- Commands
     vim.api.nvim_create_user_command('Format', function() vim.lsp.buf.format({ timeout_ms = 5000 }) end, {})
 

@@ -12,7 +12,7 @@ return {
     { '<leader>b', function() require('telescope.builtin').buffers() end },
     { '<leader>g', function() require('telescope').extensions.live_grep_args.live_grep_args() end },
     { '<leader>h', function() require('telescope.builtin').oldfiles() end },
-    { '<leader>s', function() require('telescope.builtin').lsp_document_symbols() end },
+    { '<leader>o', function() require('telescope.builtin').lsp_document_symbols() end },
     { '<leader>/', function() require('telescope.builtin').current_buffer_fuzzy_find() end, { desc = '[/] Fuzzily search in current buffer' }},
   },
   config = function ()
