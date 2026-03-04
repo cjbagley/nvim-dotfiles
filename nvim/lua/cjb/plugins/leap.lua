@@ -1,5 +1,5 @@
 return {
-    'ggandor/leap.nvim',
+    url = "https://codeberg.org/andyg/leap.nvim",
     opts = function()
         -- Highly recommended: define a preview filter to reduce visual noise
         -- and the blinking effect after the first keypress
