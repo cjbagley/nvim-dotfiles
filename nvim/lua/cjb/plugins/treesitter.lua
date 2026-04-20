@@ -60,9 +60,6 @@ return {
     context_commentstring = {
       enable = true,
     },
-    rainbow = {
-      enable = true,
-    },
     textobjects = {
       select = {
         enable = true,

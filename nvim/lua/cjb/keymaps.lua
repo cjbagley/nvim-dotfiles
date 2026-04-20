@@ -40,9 +40,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 -- Paste replace visual selection without copying it.
 vim.keymap.set('v', 'p', '"_dP')
 
--- Open the current file in the default program (on Mac this should just be just `open`).
-CJB.Nmap('<leader>o', ':!xdg-open %<cr><cr>', 'open in default program', {})
-
 -- Disable annoying command line thing.
 vim.keymap.set('n', 'q:', ':q<CR>')
 
