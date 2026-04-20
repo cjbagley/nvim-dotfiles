@@ -19,9 +19,6 @@ require('lazy').setup({
     -- Zen Mode
     { import = 'cjb.plugins.zen-mode' },
 
-    -- Comments
-    { import = 'cjb.plugins.vim-commentary' },
-
     -- Add, change, and delete surrounding text.
     { 'tpope/vim-surround' },
 
@@ -64,17 +61,8 @@ require('lazy').setup({
     -- Completion
     { import = 'cjb.plugins.cmp' },
 
-    -- PHP Refactoring Tools
-    { import = 'cjb.plugins.phpactor' },
-
-    -- Testing helper
-    { import = 'cjb.plugins.vim-test' },
-
     -- Colorize Hex Codes
     { import = 'cjb.plugins.colorizer' },
-
-    -- Show file and LSP context in a bar at the top of the screen.
-    { import = 'cjb.plugins.barbecue' },
 
     -- Virtual scrollbar
     { import = 'cjb.plugins.nvim-scrollbar' },
